@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotdog or Not Hotdog</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Hotdog or Not&nbsp;Hotdog?</h1>
+        <div class="upload-options">
+            <button id="camera-btn" class="button">📸 Take Photo</button>
+        </div>
+        <div class="upload-container">
+            <div id="drop-zone" class="drop-zone">
+                <p>Or drop an image here or click to upload</p>
+                <input type="file" id="file-input" accept="image/*" hidden>
+            </div>
+            <div id="camera-container" class="camera-container hidden">
+                <video id="camera-preview" autoplay playsinline></video>
+                <div class="camera-controls">
+                    <button id="capture-btn" class="button">📸 Capture</button>
+                    <button id="switch-camera-btn" class="button secondary">🔄 Switch Camera</button>
+                    <button id="cancel-camera-btn" class="button secondary"><span class="cancel-x">×</span>Cancel</button>
+                </div>
+            </div>
+            <div id="preview-container" class="preview-container hidden">
+                <img id="preview-image" src="" alt="Preview">
+                <button id="analyze-btn" class="button">Analyze!</button>
+            </div>
+        </div>
+        <div id="result" class="result hidden">
+            <div id="result-text"></div>
+            <button id="try-again-btn" class="button">Try Another Image</button>
+        </div>
+        <div id="loading" class="loading hidden">
+            <div class="spinner"></div>
+            <p id="loading-text">Loading...</p>
+        </div>
+    </div>
+    <script src="/script.js"></script>
+</body>
+</html>
